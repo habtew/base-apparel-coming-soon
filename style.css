@@ -15,10 +15,12 @@ img{
 
 main{
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     'logo logo'
     'hero-image hero-image'
     'content content';
+
     
 }
 
@@ -53,18 +55,23 @@ main{
     line-height: 1.4;
     padding: 2em;
 }
-
+form{
+    position: relative;
+}
 .user-input{
     width: 100%;
     padding: 1em;
     border: 1px solid hsl(0, 36%, 70%);
     border-radius: 20px;
+    
 }
 
 .arrow-icon{
-    padding: 1em;
-    border-radius: 50%;
-    background-color: hsl(0, 93%, 68%);
+    padding: .7em 2em;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    position: absolute;
+    right: 0;
+    border-radius: 20px;
 }
 
 @media (min-width: 500px) {
@@ -79,4 +86,7 @@ main{
         'content hero-image'
         'content hero-image';
     }
+    /* .hero-image{
+        min-height: 100%;
+    } */
 }
