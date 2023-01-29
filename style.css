@@ -1,3 +1,4 @@
+/* general style */
 *{
     box-sizing: border-box;
 }
@@ -13,6 +14,8 @@ img{
     max-width: 100%;
 }
 
+/* layout */
+
 main{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -26,12 +29,11 @@ main{
 
 .logo{
     grid-area: logo;
-    padding: 2em
+    padding: 2em;
 }
 
 .hero-image{
     grid-area: hero-image;
-    width: 100%;
 }
 
 .content{
@@ -53,17 +55,27 @@ main{
 
 .content p{
     line-height: 1.4;
-    padding: 2em;
+    padding-bottom: 2em;
+    font-size: 1.2rem;
 }
 form{
     position: relative;
 }
 .user-input{
+    font-family: 'Josefin Sans', sans-serif;
     width: 100%;
     padding: 1em;
     border: 1px solid hsl(0, 36%, 70%);
     border-radius: 20px;
+    text-indent: 10px;
     
+}
+
+.user-input:hover,
+.user-input:focus,
+.user-input:active{
+    border: 1px solid hsl(0, 74%, 74%);
+    outline: none;
 }
 
 .arrow-icon{
@@ -72,10 +84,33 @@ form{
     position: absolute;
     right: 0;
     border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+.arrow-icon:hover{
+    background:linear-gradient(135deg,hsl(0, 80%, 90%), hsl(0, 74%, 74%)) ;
+}
+.error-image{
+    position: absolute;
+    right: 70px ;
+    top: 10px
+}
+
+.none{
+    display: none;
+}
+
+
+@media (min-width: 372px){
+    body{
+        width: 370px;
+        margin: 0 auto;
+    }
 }
 
 @media (min-width: 500px) {
     body{
+        width: 100vw;
         background: url('./images/bg-pattern-desktop.svg') no-repeat;
         background-size: cover;
         background-position: center;
@@ -85,8 +120,25 @@ form{
         'logo hero-image'
         'content hero-image'
         'content hero-image';
+        grid-template-rows: 70px 1fr 1fr;
+         height: 100vh;
     }
-    /* .hero-image{
-        min-height: 100%;
-    } */
+    .logo{
+         padding-left: 5em;
+    }
+    .hero-image{
+        height: 100%;
+        width: 100%;
+    }
+
+    .content{
+        margin-top: 0;
+        padding-left: 5em;
+        text-align: left;
+    }
+    .content p{
+        padding-left: 0em;
+        padding-top: 0;
+    }
+
 }
