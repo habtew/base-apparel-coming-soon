@@ -121,7 +121,8 @@ form{
         'content hero-image'
         'content hero-image';
         grid-template-rows: 70px 1fr 1fr;
-         height: 100vh;
+        height: 100vh;
+        
     }
     .logo{
          padding-left: 5em;
@@ -134,6 +135,7 @@ form{
     .content{
         margin-top: 0;
         padding-left: 5em;
+        padding-right: 5em;
         text-align: left;
     }
     .content p{
