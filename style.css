@@ -125,7 +125,8 @@ form{
         
     }
     .logo{
-         padding-left: 5em;
+        padding-top: 5em;
+         padding-left: 7em;
     }
     .hero-image{
         height: 100%;
@@ -133,10 +134,12 @@ form{
     }
 
     .content{
+        font-size: 1.5rem;
         margin-top: 0;
         padding-left: 5em;
         padding-right: 5em;
         text-align: left;
+        width: 80%;
     }
     .content p{
         padding-left: 0em;
